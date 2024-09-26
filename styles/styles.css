@@ -168,9 +168,8 @@ img {
 /* ------ Project Color Definitions ------ */
 
 .theme-standard {
-    --header-background: var(--blue);
-    --header-background-gradient: linear-gradient(96deg, rgba(75, 73, 232, 1) 6%, rgba(87, 34, 205, 1) 67%);
     --background-primary: var(--light-grey);
+    --background-secondary-gradient: linear-gradient(96deg, rgba(75, 73, 232, 1) 6%, rgba(87, 34, 205, 1) 67%);
     --background-secondary: var(--blue);
     --background-tertiary: var(--white-hue-pink);
     --text-color-primary: var(--black);
@@ -295,8 +294,8 @@ h1, h2, h3, h4, h5, h6 {
 /* --------------- 4.1 Header ------------------------- */
 
 header {
-    background: var(--header-background);
-    background: var(--header-background-gradient);
+    background: var(--background-secondary);
+    background: var(--background-secondary-gradient);
     color: var(--text-color-secondary);
 }
 
@@ -410,7 +409,25 @@ header p {
     color: var(--text-color-tertiary);
 }
 
+/* --------------- 4.4 Contact ------------------------ */
 
+.contact-section {
+    background: var(--background-secondary);
+    background: var(--background-secondary-gradient);
+    padding: 50px 0;
+    color: var(--white-hue-pink);
+}
+
+.contact-section h2 {
+    font-size: 3.5rem;
+    color: var(--white-hue-pink);
+}
+
+.contact-section p {
+    margin: 2rem 0 3rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
 
 
 

@@ -147,6 +147,10 @@
     box-sizing: border-box;
 }
 
+img {
+    width: 100%;
+}
+
 /* -------------- 1.2 Color Themes ------------------- */
 
 /* ------ Color Theme Standard ------ */
@@ -163,22 +167,49 @@
 
 /* ------ Project Color Definitions ------ */
 
-@supports (--css: variables) {
-    .theme--standard {
-        --header-background: blue;
-        --header-background-gradient: linear-gradient(96deg, rgba(75, 73, 232, 1) 6%, rgba(87, 34, 205, 1) 67%);
-    }
+.theme-standard {
+    --header-background: var(--blue);
+    --header-background-gradient: linear-gradient(96deg, rgba(75, 73, 232, 1) 6%, rgba(87, 34, 205, 1) 67%);
+    --background-primary: var(--light-grey);
+    --background-secondary: var(--blue);
+    --background-tertiary: var(--white-hue-pink);
+    --text-color-primary: var(--black);
+    --text-color-secondary: var(--white-hue-pink);
+    --text-color-tertiary: var(--violet);
+    --button-primary: var(--pink);
+    --shadow-normal: rgba(0, 0, 0, 0.3);
+}
+
+/* -------------- 1.3 Buttons ------------------------ */
+
+button {
+    padding: 2rem 3rem;
+    background-color: var(--button-primary);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 10px 20px var(--shadow-normal);
+
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-color-secondary)
 }
 
 /* ------------------------------- 2. Typography ----------------------------------- */
 
 body {
     font-family: "Roboto", sans-serif;
-    display: flex;
+    color: var(--text-color-primary);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Merriweather", serif;
+    color: var(--text-color-primary);
+}
+
+a, a:hover {
+    color: var(--text-color-tertiary);
+    text-decoration: none;
 }
 
 
@@ -186,7 +217,72 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --------------- 3.1 Reusables ----------------------- */
 
+.test {
+    border: 2px dashed red;
+}
+
+.webpage-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inner-container-column {
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inner-container-row {
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-basis {
+    flex-basis: 1200px;
+}
+
+.large-basis {
+    flex-basis: 1750px;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.project-image-container {
+    flex-basis: 200px;
+}
+
 /* --------------- 3.2 Other --------------------------- */
+
+.nav-items {
+    justify-content: flex-end;
+    gap: 3rem;
+    margin: 1.5rem 0;
+}
+
+.hero-section {
+    margin: 5rem 0 0;
+}
+
+.hero-section p {
+    margin: 2rem 0;
+}
+
+.shape-section-end {
+    height: 100px;
+    margin: 150px 0 0;
+}
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
@@ -195,8 +291,82 @@ h1, h2, h3, h4, h5, h6 {
 header {
     background: var(--header-background);
     background: var(--header-background-gradient);
+    color: var(--text-color-secondary);
+}
+
+.nav-items {
+    font-size: 1.5rem;
+    font-weight: 300;
+    list-style-type: none;
+}
+
+header h1 {
+    color: var(--text-color-secondary);
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+header p {
+    font-size: 2rem;
+    font-weight: 300;
 }
 
 /* --------------- 4.2 Introduction ------------------- */
+
+.introduction > .inner-container-column {
+    margin: 100px 0;
+}
+
+.introduction p:not(:last-child) {
+    margin: 1rem 0;
+    font-family: "Merriweather", serif;
+    font-size: 2.75rem;
+    font-weight: 600;
+    color: var(--text-color-tertiary);
+    text-align: center;
+}
+
+.introduction p:last-of-type {
+    margin: 100px 0 0;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+/* --------------- 4.3 Projects ----------------------- */
+
+.projects {
+    background-color: var(--background-tertiary);
+}
+
+.projects article {
+    margin: 100px 0;
+    justify-content: space-between;
+}
+
+.project-image-container {
+    flex-basis: 900px;
+}
+
+.project-content {
+    margin: 0 2rem;
+    flex-basis: 400px;
+}
+
+.project-content h3 {
+    font-size: 2.5rem;
+}
+
+.project-content p {
+    font-size: 1.3rem;
+}
+
+.squiggly-line {
+
+}
+
+.project-link {
+    font-weight: 700;
+    text-transform: uppercase;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */

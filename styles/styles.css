@@ -144,10 +144,6 @@ h1, h2, h3, h4, h5, h6 {
     flex-basis: 1750px;
 }
 
-.reverse {
-    flex-direction: row-reverse;
-}
-
 .project-image-container {
     flex-basis: 200px;
 }
@@ -233,6 +229,10 @@ header p {
     justify-content: space-between;
 }
 
+.projects article:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
 .project-image-container {
     flex-basis: 1000px;
     filter: drop-shadow(-5px 30px 12px var(--shadow-light));
@@ -314,7 +314,7 @@ header p {
 }
 
 .contact-section form {
-    width: 1000px;
+    width: 80%;
     font-size: 1.2rem;
 }
 

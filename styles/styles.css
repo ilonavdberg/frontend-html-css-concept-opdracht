@@ -168,15 +168,18 @@ img {
 /* ------ Project Color Definitions ------ */
 
 .theme-standard {
-    --background-primary: var(--light-grey);
-    --background-secondary-gradient: linear-gradient(96deg, rgba(75, 73, 232, 1) 6%, rgba(87, 34, 205, 1) 67%);
-    --background-secondary: var(--blue);
-    --background-tertiary: var(--white-hue-pink);
+    --bg-color-primary: var(--light-grey);
+    --bg-color-secondary-gradient: linear-gradient(96deg, rgba(75, 73, 232, 1) 6%, rgba(87, 34, 205, 1) 67%);
+    --bg-color-secondary: var(--blue);
+    --bg-color-tertiary: var(--white-hue-pink);
+    --bg-color-quaternary: var(--black);
     --text-color-primary: var(--black);
     --text-color-secondary: var(--white-hue-pink);
     --text-color-tertiary: var(--violet);
-    --button-primary: var(--pink);
-    --border-primary: var(--blue);
+    --text-color-quaternary: var(--light-grey);
+    --button-color-primary: var(--pink);
+    --border-color-primary: var(--blue);
+    --border-color-secondary: var(--grey);
     --shadow-normal: rgba(0, 0, 0, 0.3);
     --shadow-light: rgba(0, 0, 0, 0.15);
 
@@ -186,7 +189,7 @@ img {
 
 button {
     padding: 2rem 3rem;
-    background-color: var(--button-primary);
+    background-color: var(--button-color-primary);
     border: none;
     border-radius: 40px;
     box-shadow: 0 10px 20px var(--shadow-normal);
@@ -207,7 +210,8 @@ a, a:hover, a:focus {
 
 /* ------------------------------- 2. Typography ----------------------------------- */
 
-body {
+body,
+textarea {
     font-family: "Roboto", sans-serif;
     color: var(--text-color-primary);
 }
@@ -294,8 +298,8 @@ h1, h2, h3, h4, h5, h6 {
 /* --------------- 4.1 Header ------------------------- */
 
 header {
-    background: var(--background-secondary);
-    background: var(--background-secondary-gradient);
+    background: var(--bg-color-secondary);
+    background: var(--bg-color-secondary-gradient);
     color: var(--text-color-secondary);
 }
 
@@ -341,7 +345,7 @@ header p {
 /* --------------- 4.3 Projects ----------------------- */
 
 .projects {
-    background-color: var(--background-tertiary);
+    background-color: var(--bg-color-tertiary);
 }
 
 .projects article {
@@ -392,7 +396,7 @@ header p {
 }
 
 .usp-article {
-    border: 2px solid var(--border-primary);
+    border: 2px solid var(--border-color-primary);
     box-shadow: 0 10px 20px var(--shadow-light);
     padding: 3rem;
     text-align: left;
@@ -412,9 +416,9 @@ header p {
 /* --------------- 4.4 Contact ------------------------ */
 
 .contact-section {
-    background: var(--background-secondary);
-    background: var(--background-secondary-gradient);
-    padding: 50px 0;
+    background: var(--bg-color-secondary);
+    background: var(--bg-color-secondary-gradient);
+    padding: 100px 0;
     color: var(--white-hue-pink);
 }
 
@@ -429,6 +433,35 @@ header p {
     font-weight: 300;
 }
 
+.contact-section form {
+    width: 1000px;
+    font-size: 1.2rem;
+}
 
+.contact-section input,
+.contact-section textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 3rem;
+    border: 1px solid var(--border-color-secondary);
+    border-radius: 5px;
+    padding: 1.5rem 1.5rem;
+    font-size: 1.2rem;
+}
+
+.contact-section button {
+    display: block;
+    margin: auto;
+    padding: 2rem 6rem;
+}
+
+/* --------------- 4.1 Footer ------------------------- */
+
+footer {
+    background-color: var(--bg-color-quaternary);
+    padding: 2rem 0;
+    color: var(--text-color-quaternary);
+    text-align: center;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */

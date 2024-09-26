@@ -130,16 +130,23 @@
         </div>
     </section>
     <section class="test contact-section outer-container">
-        <div class="test inner-container-column small-basis">
+        <div class="inner-container-column small-basis">
             <h2>Let's work together</h2>
             <p>Have a question? Need a quote? Let us know!</p>
             <form action="requires-javascript">
-                <label for="name-field">Name</label>
-                <input type="text" id="name-field" name="name">
-                <label for="email-field">Email</label>
-                <input type="text" id="email-field" name="email">
-                <label for="message-field"></label>
-                <textarea name="Message" id="message-field" cols="30" rows="10"></textarea>
+                <label for="name-field">
+                    Name
+                    <input type="text" id="name-field" name="name" placeholder="Name"/>
+                </label>
+                <label for="email-field">
+                    Email
+                    <input type="text" id="email-field" name="email" placeholder="Email"/>
+                </label>
+                <label for="message-field">
+                    Message
+                    <textarea name="Message" id="message-field" placeholder ="Message" cols="30" rows="10"></textarea>
+                </label>
+
                 <button type="submit">Send</button>
             </form>
         </div>

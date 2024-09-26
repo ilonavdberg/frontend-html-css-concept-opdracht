@@ -200,7 +200,7 @@ header p {
 /* --------------- 4.2 Introduction ------------------- */
 
 .introduction > .inner-container-column {
-    margin: 100px 0;
+    margin: 100px 2rem;
 }
 
 .introduction p:not(:last-child) {
@@ -225,7 +225,7 @@ header p {
 }
 
 .projects article {
-    margin: 100px 0;
+    margin: 100px 2rem;
     justify-content: space-between;
 }
 
@@ -345,3 +345,27 @@ footer {
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 800px) {
+    .nav-items {
+        justify-content: space-around;
+    }
+
+    .nav-items *, .nav-items a:hover, .nav-items a:focus {
+        font-weight: bold;
+    }
+
+    header h1 {
+        font-size: 3.2rem;
+    }
+
+    .projects article,
+    .projects article:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .services-section {
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(1, 500px);
+    }
+}
